@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c602d17e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" type="text/css" href="css/efectoboton.css">
+    <title>Generador de memes</title>
+</head>
+
+
+<!-- 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Raquel Muriega">
+  <meta name="description" content="Proyecto editor de memes realizado como evaluación del segundo  módulo de ADA">
+  <link  rel="icon"   href="./img/icono.png" type="image/png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" id="cssArchivo" href="./style.css">
+  <link rel="stylesheet" href="./botonesMenu.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+  <title>Generador de memes</title>
+</head> -->
+
+
+<body>
+  
+   <!--Comienzo del Header-->
+
+  <header class="cajaPadre">
+    <h1 id="generador" class="generador">GENERADOR DE MEMES</h1>
+    <div id="headerBotones" class="headerbotones">
+      
+      <button id="botonImagen" class="button" onclick="showImageAtributes()">
+      <i class="fa fa-image"></i>
+        Imagen 
+      </button>
+      <button id="botonTexto" class="button" onclick="showTextAtributes()">
+        <i class= "fa fa-pencil-alt"></i>
+        Texto
+      </button>
+      <button id="botonToggle" class="button" onclick="cambiarArchivo(this)" >
+        🌜 Modo oscuro
+      </button>
+    </div>
+  </header>
+  
+  <!--Fin del Header-->
+ 
+  
+  <section class="textoSeccionCenter" >
+   
+    <!--Comienzo del Main-->
+   
+    <main class="cajaPrincipal" id="cajaPrincipal">
+      <section class="cajaSeccion" id="cajaSeccion">
+        <article  class="textoSuperior" id="textoSuperior">TOP TEXT</article>
+        <article class="textoCentro" id="textoCentro" ></article>
+        <article class="textoInferior" id="textoInferior">BOTTOM TEXT</article>
+      </section>
+      <span id="botonDescarga" class="boton5" onclick='descargarMeme()'>Descargar Meme</span>
+    </main>
+   
+    <!--Fin del Main-->
+    
+    <!--Comienzo seccion imagen-->
+    
+    <aside  class="panel-img" id="panelImg">
+      <h2 class="tituloImagen" id="tituloSeccionImagen">IMAGEN</h2>
+      <div class="seccionUrl">
+        <h4 class="titulo-url">URL</h4>
+        <input type="text" class="inputUrl-imagen" id="inputImagen"  aria-label="ingreso URL">
+      </div>
+          
+      
+      <div class="fondo">
+        <h3 class="titulo-fondo">FONDO</h3>
+        <div class="columnas">
+          <div class="coloresImagen">
+            <input type="color" aria-label="fondo imagen" value="#FFFFFF" id="colorImagen"  aria-label="fondo imagen">
+            <span id="colorImagenSpan" aria-hidden="true">#FFFFFF</span>
+          </div>
+          <div class="fondo-combinacion">
+            <select  id="opcionesFondo" class="filtros-opciones">
+              <option value="normal" onkeypress="actualizarTipoMezcla()">Ninguno</option>
+              <option value="lighten" onkeypress="actualizarTipoMezcla()">Aclarar</option>
+              <option value="darken" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
+              <option value="difference" onkeypress="actualizarTipoMezcla()">Diferencia</option>
+              <option value="luminosity" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
+              <option value="multiply" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
+            </select>
+          </div>
+        </div>
+      </div>
+        
+      <div class="caja-filtros">
+        <h3 class="titulo-filtro">FILTROS</h3>
+        <div class="ajustes-brillo">
+          <label for="brillo">BRILLO</label>
+          <input type="range" id="brillo" min="0" max="1" value="1" step="0.1" >
+        </div>
+        <div class="ajustes-brillo">
+          <label for="opacidad">OPACIDAD</label>
+          <input type="range" id="opacidad" min="0" max="1" value="1" step="0.1">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="contraste">CONTRASTE</label>
+          <input type="range" id="contraste" min="100" max="1000" value="100">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="desenfoque">DESENFOQUE</label>
+          <input type="range" id="desenfoque" min="0" max="10" value="0" step="0.1">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="escalaColores">ESCALA DE GRISES</label>
+          <input type="range" id="escalaColores" min="0" max="100" value="0">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="sepia">SEPIA</label>
+          <input type="range" id="sepia" min="0" max="100" value="0">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="hue">HUE</label>
+          <input type="range" id="hue" min="0" max="360" value="0">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="botonSaturado">SATURADO</label>
+          <input type="range" id="botonSaturado" min="100" max="1000" value="100" step="10">
+        </div>
+        <div class="ajustes-brillo">
+          <label for="negativo">NEGATIVO</label>
+          <input type="range" id="negativo" min="0" max="1" value="0" step="0.1">
+        </div>
+      </div>
+      <button class="botonImagen" id="botonImagenFiltros"> RESTABLECER FILTROS</button>
+    
+    </aside>
+    <!-- Fin seccion imagen -->
+    
+    <!--Comienzo seccion texto-->
+    
+    <aside class="columnaLateralTexto" id="textoSeccion">
+    <form>
+      <h2 class="tituloTextoAside" id="tituloTexxt">TEXTO</h2>
+      <div  class="contenedorColumnaTexto">
+        <h4 class="panel-control-title">SUPERIOR</h4>
+        <textarea  type="text" id="ingresoTitulo" value="TOP TEXT">
+        TOP TEXT  
+        </textarea>
+          
+      </div>
+        
+        <div class="contenedorColumnaTexto">
+          <label id="boton-checkbox" class="myCheckbox" for="top-check" >Sin texto superior
+            <input id="top-check" type="checkbox" >
+          </label>
+        </div>
+        <br>
+        <div class="contenedorColumnaTexto">
+          <h4 class="panel-control-title">INFERIOR</h4>
+          <textarea type="text" id="textoInferior" value="boton bajo">
+            BOTTOM TEXT
+          </textarea>
+          
+        </div>
+        <div class="contenedorColumnaTexto">
+          <label for="top-check-2" class="top-check-2" >Sin texto inferior
+            <input id="top-check-2" type="checkbox">
+          </label>
+        </div>
+      
+        <br> 
+        
+        <!--ESTILOS AL TEXTO-->
+        
+        <div class="contenedorColumnaTexto">
+          <label  id="fuente">FUENTE</label>
+          <select name="option" id="estilosDeFuentes">
+            <option value="arial">Arial</option>
+            <option value="arial-black">Arial Black</option>
+            <option value="american-typewriter">American Typewriter</option>
+            <option value="andale-mono">Andale Mono</option>
+            <option value="Impact">Impact</option>
+            <option class="helvetica" value="helvetica">Helvetica</option>
+          </select>
+        </div>
+        <div class="botonEstilos">
+          <input id="tamañoLetra" type="number" value="40" min="0" max="50">
+          <button id="izquierda"><img src="./img/left.ico" alt=""></button>
+          <button  id="centrar"><img src="./img/center.ico" alt=""></button>
+          <button  id="derecha"><img src="./img/right.ico" alt=""></a></button>
+        </div>
+        
+        <div class="botonEstilos">
+          <div class="colorBotonTexto">
+            <label  for="colorLetra" class="titleColorLabel">COLOR</label>
+            <div class="botonesColor">
+              <input type="color" id="colorLetra" class="colorLetraInput" value="#000000">
+              <span id="textoColor">#000000</span>
+            </div>
+          </div>
+          <div class="codigoColor">
+            <label for="fondoLabel" class="fondoLabelInput">FONDO</label>
+            <div class="botonesColor">
+              <input type="color" id="fondoLabel" value="#9D72FF">
+              <span id="colorLabelFondo"> #9D72FF</span>
+            </div>
+          </div>
+        </div>
+        <div class="contenedorColumnaTexto">
+          <label for="transparente" class="transparente" onclick="actualizarFondoTexto()">Fondo transparente
+            <input class="top-check-2" id="transparente" type="checkbox">
+          </label>
+        </div>
+        <br>
+        <div class="contorno">
+          <label id="contorno">CONTORNO</label>
+        </div>
+        <div class="contorno-boton">
+          <button id="botonContorno-vacio" onclick="contornear(event, 'ninguno')">NINGUNO</button>
+          <button id="botonContorno-claro" onclick="contornear(event, 'claro')">CLARO</button>
+          <button id="botonContorno-oscuro" onclick="contornear(event, 'oscuro')">OSCURO</button>
+        </div>
+        
+        <br>
+        <div>
+          <label for="espaciado" id="espaciado">ESPACIADO</label>
+          <input type="number" class="espaciado-class" id="espaciadoValue" value="35" onchange="espaciadoTexto()">
+        </div>
+        <br>
+        <div>
+          <label for="interlineado" id="interlineado">INTERLINEADO</label>
+          <select name="interlineado" id="interlineadoValue" onclick="aplicandoInterlineado()">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option selected value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+          </select>
+        </div>
+        
+      </form>
+    </aside>
+    <!--*************FINALIZACIÓN DE ESTILOS AL TEXTO*********************-->
+  </section>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
