@@ -17,15 +17,15 @@ body {
   cursor: pointer;
   border: none;
   width: 200px;
-  height: 50px;
+  height: 40px;
   border-radius: 50px;
   outline: none;
   background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
   background-size: 400%;
   color: #fff;
   font-size: 14px;
-  letter-spacing: 4px;
 }
+
 .button::before {
   content: '';
   position: absolute;

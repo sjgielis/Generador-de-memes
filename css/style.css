@@ -15,6 +15,8 @@
   
 
   body{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -23,7 +25,7 @@
     
   .generador{
     text-align: center;
-    margin-right: 20%;
+    margin-right: 10%;
     width: 80%;
     margin-top: 2%;
     font-size: 36px;
@@ -35,15 +37,14 @@
   }
   
   #headerBotones{
-    margin-top: 15px;
+      margin: 10px;
       align-items: center;
       text-align: center;
       width: 80%;
-      margin-bottom: 20px;
-  }
+    }
   
   .cajaPadre{
-    height: 20vh;
+    height: 18vh;
     margin-top: 0px;
     
   }
@@ -53,11 +54,12 @@
     margin-right: 10px;
     padding: 0 10px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     transition: background-color 0.2s;
   }
   
   .cajaPrincipal{
+    width: 80%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -70,40 +72,18 @@
   .cajaSeccion {
     display: flex;
     flex-direction: column;
-    min-height: 445px;
-    margin-top: 5%;
-    width: 70%;
+    justify-content: center;
+    min-height: 400px;
+    margin: 4%;
+    width: 50%;
     position: relative;
   }
-  
-  
-  .boton5 {
-    color: #fff !important;
-      font-size: 15px;
-      margin-right: 2%;
-      font-weight: 500;
-      padding: 0.5em 1.2em;
-      background: #9D1D86;
-      cursor: pointer;
-      margin-bottom: 10%;
-      position: relative;
-      border: 2px solid #318aac;
-      outline: 1px solid;
-      outline-color: rgba(49, 138, 172, 0.4);
-      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  .boton5:hover {
-    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
-    outline-color: rgba(49, 138, 172, 0);
-    outline-offset: 80px;
-    text-shadow: 1px 1px 6px #fff;
-  }
-  
+    
   .textoSuperior{ 
-    width: 80%;
+    width: 100%;
     color: black;
     text-align: center;
-    padding: 25px 50px;
+    padding: 20px 50px;
     font-size: 40px;
     top: 0;
     font-weight: 800;
@@ -123,11 +103,11 @@
   }
   
   .textoInferior{  
-    width: 80%;
+    width: 100%;
     color: black;
     bottom: 0;
     text-align: center;
-    padding: 25px 50px;
+    padding: 20px 50px;
     position: absolute;
     font-size: 40px;
     font-weight: 600;
@@ -141,7 +121,7 @@
   
   
   .textoCentro{
-    width: 80%;
+    width: 100%;
     height: 40%;
     padding: 10%;
     background-color: black;
@@ -178,7 +158,7 @@
   
   
   
-  .panel-img{
+  .aside-img{
     width: 20%;
     height: 100%;
     display: flex;
@@ -587,12 +567,10 @@
   
   .ocultar{
     display: none;
-    /* visibility: hidden; */
-    /* font-size; */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   
-  /***Boton cerrar*/
+  /*Boton cerrar*/
   
   .botonCerrar {
     position: fixed;
@@ -608,107 +586,7 @@
     background-color: #9D72FF;
   }
   
-  /*
-    *********************************** 
-                Responsive
-    ***********************************
-  */
-  
-  /*
-  @media (min-width: 901px) {
-    aside {
-      display: block;
-      box-shadow: none;
-    }
-    .botonCerrar {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 801px) and (max-width:900px){
-    .botonCerrar {
-      display: none;
-    }
-    #panelImg, #textoSeccion{
-      width: 30%;
-    }
-    .topText, .textoBajo{
-      font-size: 10%;
-      display: flex;
-      width: 100%;
-      padding: 17px 30px;
-      z-index: auto;
-      flex-direction: column-reverse;
-    }
-    .cajaSeccion{
-      width: 55vh;
-      min-height: 63vh;
-    }
-  }  
-  @media (max-width: 800px) {
-    .titulo {
-      font-size: 26px;
-      width: 100%;
-    }
-    .cajaMain{
-      width: 100%;
-      min-height: 80vh;
-    }
-    .topText, .textoBajo{
-      font-size: 10%;
-      display: flex;
-      width: 100%;
-      padding: 17px 30px;
-      z-index: auto;
-      flex-direction: column-reverse;
-    }
-    
-    .glow-on-hover{
-      width: 25%;
-      font-size: x-small;
-      margin: 1%;
-      height: 50px;
-      border: none;
-      outline: none;
-      color: whitesmoke;
-      background: #111;
-      cursor: pointer;
-      position: relative;
-      z-index: 0;
-      border-radius: 10px;
-    }
-    
-    .boton5{
-      padding: 4px 5px;
-      position: absolute;
-      margin-bottom: 1%;
-      bottom:0;
-    }
-    .cajaSeccion{
-      position: absolute;
-      width: 50vh;
-      min-height: 40vh;
-      top: 20%;
-    }
-    
-    #panelImg, #textoSeccion{
-      width: 100%;
-    }
-    .centerText{
-      padding: 30%;
-    }
-    .wrap{
-      display: flex;
-      flex-wrap: wrap;
-      height: 10%;
-      width: 100%;
-      margin-bottom: 5px;
-      justify-content: center;
-    }
-    aside{
-      width: 100%;
-    }   
-  }  */
-  
+  /* responsive */
   
   @media (max-width:1440px) {
   

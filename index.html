@@ -9,23 +9,6 @@
     <title>Generador de memes</title>
 </head>
 
-
-<!-- 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Raquel Muriega">
-  <meta name="description" content="Proyecto editor de memes realizado como evaluación del segundo  módulo de ADA">
-  <link  rel="icon"   href="./img/icono.png" type="image/png" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <link rel="stylesheet" id="cssArchivo" href="./style.css">
-  <link rel="stylesheet" href="./botonesMenu.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-  <title>Generador de memes</title>
-</head> -->
-
-
 <body>
   
    <!--Comienzo del Header-->
@@ -61,14 +44,14 @@
         <article class="textoCentro" id="textoCentro" ></article>
         <article class="textoInferior" id="textoInferior">BOTTOM TEXT</article>
       </section>
-      <span id="botonDescarga" class="boton5" onclick='descargarMeme()'>Descargar Meme</span>
+      <button class="button" id="botonDescarga" onclick='descargarMeme()'>Descargar Meme</button>
     </main>
    
     <!--Fin del Main-->
     
     <!--Comienzo seccion imagen-->
     
-    <aside  class="panel-img" id="panelImg">
+    <aside  class="aside-img" id="panelImg">
       <h2 class="tituloImagen" id="tituloSeccionImagen">IMAGEN</h2>
       <div class="seccionUrl">
         <h4 class="titulo-url">URL</h4>
@@ -161,7 +144,7 @@
         <br>
         <div class="contenedorColumnaTexto">
           <h4 class="panel-control-title">INFERIOR</h4>
-          <textarea type="text" id="textoInferior" value="boton bajo">
+          <textarea type="text" id="texInferior" value="boton bajo">
             BOTTOM TEXT
           </textarea>
           
@@ -174,7 +157,7 @@
       
         <br> 
         
-        <!--ESTILOS AL TEXTO-->
+        <!--Comienzo estilo de Texto-->
         
         <div class="contenedorColumnaTexto">
           <label  id="fuente">FUENTE</label>
@@ -245,7 +228,7 @@
         
       </form>
     </aside>
-    <!--*************FINALIZACIÓN DE ESTILOS AL TEXTO*********************-->
+    <!--Fin aside Texto-->
   </section>
   
   <script src="./main.js"></script>
