@@ -7,9 +7,9 @@
 
 :root{
     --fondoVioleta: rgb(247, 174, 222);
-    --colorTitulo: #ff2281;
+    --colorTitulo: #ee75a9;
     --fondoLila: #ff72d0;
-    --colorLetras: #D124B7;
+    --colorLetras: #810c70;
     --colorInput: #C01963;
   }
   
@@ -28,12 +28,11 @@
     margin-right: 10%;
     width: 80%;
     margin-top: 2%;
-    font-size: 36px;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-size: 40px;
+    font-weight: 700;
     -webkit-text-fill-color: var(--colorTitulo);
     -webkit-text-stroke: 1px black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   #headerBotones{
@@ -92,13 +91,13 @@
   }
   
   #textoColor, #colorLabelFondo{
-    font-size: 12%;
+    font-size: 12px;
     padding: 5%;
     color: rgb(219, 202, 202);
     cursor: pointer;
   }
   
-  #textoInferior{
+  #texInferior{
     background-color: var(--fondoLila);
   }
   
@@ -232,10 +231,10 @@
   
   .caja-url {
     margin-bottom: 20px;
+    
   }  
   
-  
-  
+   
   
   .titulo-url{
     margin-bottom: 8px;
@@ -262,11 +261,9 @@
   .columnas {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .columnas {
     margin-bottom: 0;
   }
+  
   
   
   
@@ -381,12 +378,11 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-  }
-  
-  .fondo-combinacion  {
     width: calc(50% - 5px);
     margin-bottom: 0;
+  
   }
+  
   
   .caja-filtros{
     margin-bottom: 20px;
@@ -494,7 +490,7 @@
     font-size: 12px;
   }
   
-  .panel-control-title, .titulo-url, .titulo-fondo{
+  .mod-title, .titulo-url, .titulo-fondo{
     font-size: 12px;
     color: var(--colorLetras);;
     margin-bottom: 2%;
@@ -520,14 +516,14 @@
     background-color: var( --fondoLila);
   }
   
-  
+/*   
   #fuente{
     font-size: 12px;
     margin-bottom: 6px;
     border-radius: 5%;
     color: var(--colorLetras);;
   }
-  
+   */
   #tamañoLetra{
     display: flex;
     justify-content: space-evenly;
@@ -541,11 +537,6 @@
     cursor: pointer;
   }
   
-  .titleColorLabel, .fondoLabelInput, #contorno, #espaciado, #interlineado{
-    font-size: 12%;
-    cursor: pointer;
-    color: var(--colorLetras);
-  }
   
   #izquierda, #centrar, #derecha, #interlineadoValue{
     background-color:  var( --fondoLila);

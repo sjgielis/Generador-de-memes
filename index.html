@@ -129,7 +129,7 @@
     <form>
       <h2 class="tituloTextoAside" id="tituloTexxt">TEXTO</h2>
       <div  class="contenedorColumnaTexto">
-        <h4 class="panel-control-title">SUPERIOR</h4>
+        <h4 class="mod-title">SUPERIOR</h4>
         <textarea  type="text" id="ingresoTitulo" value="TOP TEXT">
         TOP TEXT  
         </textarea>
@@ -143,7 +143,7 @@
         </div>
         <br>
         <div class="contenedorColumnaTexto">
-          <h4 class="panel-control-title">INFERIOR</h4>
+          <h4 class="mod-title">INFERIOR</h4>
           <textarea type="text" id="texInferior" value="boton bajo">
             BOTTOM TEXT
           </textarea>
@@ -154,39 +154,41 @@
             <input id="top-check-2" type="checkbox">
           </label>
         </div>
-      
-        <br> 
+                
+      <br> 
         
         <!--Comienzo estilo de Texto-->
         
         <div class="contenedorColumnaTexto">
-          <label  id="fuente">FUENTE</label>
+          <label class="mod-title" id="fuente">FUENTE</label>
           <select name="option" id="estilosDeFuentes">
             <option value="arial">Arial</option>
-            <option value="arial-black">Arial Black</option>
-            <option value="american-typewriter">American Typewriter</option>
-            <option value="andale-mono">Andale Mono</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Times new Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
             <option value="Impact">Impact</option>
-            <option class="helvetica" value="helvetica">Helvetica</option>
+            <option class="helvetica" value="Helvetica">Helvetica</option>
           </select>
         </div>
+       
         <div class="botonEstilos">
           <input id="tamañoLetra" type="number" value="40" min="0" max="50">
-          <button id="izquierda"><img src="./img/left.ico" alt=""></button>
-          <button  id="centrar"><img src="./img/center.ico" alt=""></button>
-          <button  id="derecha"><img src="./img/right.ico" alt=""></a></button>
+          <button id="izquierda"><i class="fas fa-align-left"></i></button>
+          <button id="centrar"><i class="fas fa-align-center"></i></button>
+          <button id="derecha"><i class="fas fa-align-right"></i></button>
         </div>
+                
         
         <div class="botonEstilos">
           <div class="colorBotonTexto">
-            <label  for="colorLetra" class="titleColorLabel">COLOR</label>
+            <label  for="colorLetra" class="mod-title">COLOR</label>
             <div class="botonesColor">
               <input type="color" id="colorLetra" class="colorLetraInput" value="#000000">
               <span id="textoColor">#000000</span>
             </div>
           </div>
           <div class="codigoColor">
-            <label for="fondoLabel" class="fondoLabelInput">FONDO</label>
+            <label for="fondoLabel" class="mod-title">FONDO</label>
             <div class="botonesColor">
               <input type="color" id="fondoLabel" value="#9D72FF">
               <span id="colorLabelFondo"> #9D72FF</span>
@@ -200,7 +202,7 @@
         </div>
         <br>
         <div class="contorno">
-          <label id="contorno">CONTORNO</label>
+          <label class="mod-title" id="contorno">CONTORNO</label>
         </div>
         <div class="contorno-boton">
           <button id="botonContorno-vacio" onclick="contornear(event, 'ninguno')">NINGUNO</button>
@@ -210,12 +212,12 @@
         
         <br>
         <div>
-          <label for="espaciado" id="espaciado">ESPACIADO</label>
+          <label for="espaciado" id="espaciado" class="mod-title">ESPACIADO</label>
           <input type="number" class="espaciado-class" id="espaciadoValue" value="35" onchange="espaciadoTexto()">
         </div>
         <br>
         <div>
-          <label for="interlineado" id="interlineado">INTERLINEADO</label>
+          <label for="interlineado" id="interlineado" class="mod-title">INTERLINEADO</label>
           <select name="interlineado" id="interlineadoValue" onclick="aplicandoInterlineado()">
             <option value="0.8">0.8</option>
             <option value="1">1</option>
