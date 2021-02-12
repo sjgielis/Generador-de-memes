@@ -9,11 +9,18 @@ const tamañoLetra = document.getElementById("tamañoLetra");
 const izquierda = document.getElementById("izquierda");
 const derecha = document.getElementById("derecha");
 const centrar = document.getElementById("centrar");
-const colorLetra = document.getElementById("colorTexto");
+const colorLetra = document.getElementById("colorLetra");
 const textoColor = document.getElementById("textoColor");
 const colorFondo = document.getElementById("colorFondo");
 const colorLabelFondo = document.getElementById("colorLaberFondo");
-
+const contornoVacio = document.getElementById("contornoVacio");
+const contornoClaro = document.getElementById("contornoClaro");
+const contornoOscuro = document.getElementById("contornoOscuro");
+const espaciado = document.getElementById("espaciadoValue");
+const interlineado = document.getElementById("interlineadoValue");
+const asideImagen = document.getElementById("asideImagen");
+const asideTexto = document.getElementById("asideTexto");
+const cajaPrincipal = document.getElementById("cajaPrincipal");
 
 
 
@@ -104,7 +111,7 @@ colorLetra.addEventListener('input', (e) =>{
     const colorTexto = e.target.value;
     textoSuperior.style.color = colorTexto;
     textoInferior.style.color = colorTexto;
-    textoColor.innerHTML = colorTexto.toUpperCase();
+    textoColor.innerText = `${colorTexto}`;
   })
   
   
@@ -113,5 +120,72 @@ colorLetra.addEventListener('input', (e) =>{
     const colorFondo = e.target.value;
     textoSuperior.style.backgroundColor = colorFondo;
     textoInferior.style.backgroundColor = colorFondo;
-    colorLabelFondo.innerHTML = colorFondo.toUpperCase();
+    colorLabelFondo.innerText = `${colorFondo}`;
   })
+
+  function actualizarFondoTexto() {
+    if (!transparente.checked) {
+      const color = fondoLabel.value
+      fondoLabel.innerText = color.toUpperCase()
+      textoSuperior.style.backgroundColor = color
+      textoInferior.style.backgroundColor = color
+      textoSuperior.style.position=''
+    }else {
+      textoSuperior.style.backgroundColor = 'transparent'
+      textoInferior.style.backgroundColor = 'transparent'
+      textoSuperior.style.position='absolute'
+    }
+  }
+
+
+
+
+  contornoClaro.addEventListener(`click`, (e) =>{
+      e.preventDefault();
+      textoSuperior.style.textShadow = "2px 2px #FFF, -2px -2px #FFF,  2px 2px #FFF, -2px -2px #FFF, 2px 2px #FFF";
+      textoInferior.style.textShadow = "2px 2px #FFF, -2px -2px #FFF,  2px 2px #FFF, -2px -2px #FFF, 2px 2px #FFF"; 
+  })  
+
+  contornoOscuro.addEventListener(`click`, (e) =>{
+    e.preventDefault();
+    textoSuperior.style.textShadow = "2px 2px #000, -2px -2px #000,  2px 2px #000, -2px -2px #000, 2px 2px #000";
+    textoInferior.style.textShadow = "2px 2px #000, -2px -2px #000,  2px 2px #000, -2px -2px #000, 2px 2px #000"; 
+ })  
+
+ contornoVacio.addEventListener(`click`, (e) =>{
+    e.preventDefault();
+    textoSuperior.style.textShadow = "none";
+    textoInferior.style.textShadow = "none"; 
+ })  
+
+ espaciado.addEventListener('change', (e) => {
+    const espLinea = e.target.value; 
+    textoSuperior.style.padding = `${espLinea}px 15px`;
+    textoInferior.style.padding = `${espLinea}px 15px`;
+    textoSuperior.style.marginTop = '0';
+});
+
+interlineado.addEventListener('change', (e) => {
+    const entreLinea = e.target.value;
+    textoSuperior.style.lineHeight = `${entreLinea}`;
+    textoInferior.style.lineHeight = `${entreLinea}`;
+    textoSuperior.style.marginTop = '0';
+});
+
+
+// /Cambio de boton texto a boton imagen
+
+
+showImageAtributes();
+function showImageAtributes(){
+  asideTexto.style.display= 'none';
+  asideImagen.style.display = '';
+  cajaPrincipal.style.width="80%";
+}
+
+function showTextAtributes(){
+  asideImagen.style.display='none';
+  asideTexto.style.display= ''; 
+  cajaPrincipal.style.width="80%";
+}
+
