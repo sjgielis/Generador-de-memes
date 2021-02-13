@@ -32,7 +32,7 @@
     font-weight: 700;
     -webkit-text-fill-color: var(--colorTitulo);
     -webkit-text-stroke: 1px black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
   }
   
   #headerBotones{
@@ -244,7 +244,7 @@
   }
   
   
-  .inputImagen {
+   .urlImagen {
     width: 100%;
     height: 36px;
     background-color: var( --fondoLila);
@@ -253,7 +253,7 @@
     margin-bottom: 5px;
   }
   
-  .inputImagen:hover,
+  .Imagen:hover,
   .inputImagen:focus {
     background-color: var( --fondoLila);
   }
@@ -353,17 +353,26 @@
     max-width: 44px;
   }
 
-/* 
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearence: none;
-    border: none;
-    border-radius: 50%;
-    background-color: var(--colorTitulo);
-  } */
+   /* cambio de estilo del range  */
 
+  input[type='range'],  
+  input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+  input[type=range]::-webkit-slider-thumb {
+  background-color: var(--colorTitulo);
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--colorTitulo);
+  border-radius: 50%;
+  margin-top: -1px;
+  }
+
+ 
   
-  
-  
+
+
   
   .filtros-opciones {
     width: 100%;
@@ -408,14 +417,15 @@
   }
   
   
-  .ajustes-brillo {
+  .ajustes {
     margin-top: 15px;
     color: var(--colorLetras);;
     font-size: 13px;
   }
   
-  .ajustes-brillo > input[type='range'] {
+  .ajustes > input[type='range'] {
     transition: 0.2s;
+    
   }
   
   
@@ -432,7 +442,7 @@
     cursor: pointer;
   }
   
-  #botonImagenFiltros{
+  #resetFiltros{
     margin-top: 13px;
     text-decoration: none;
     font-weight: 600;
@@ -467,7 +477,7 @@
     cursor: pointer;
   }
     
-  #brillo, #opacidad, #contraste, #desenfoque, #sepia, #hue, #botonSaturado, #negativo, #escalaColores{
+  #brillo, #opacidad, #contraste, #desenfoque, #sepia, #hue, #saturado, #negativo, #escalaGrises{
     width: 100%;
     cursor: pointer;
   }
