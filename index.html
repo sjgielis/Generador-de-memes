@@ -25,7 +25,7 @@
         <i class= "fa fa-pencil-alt"></i>
         Texto
       </button>
-      <button id="botonToggle" class="button" onclick="cambiarArchivo(this)" >
+      <button id="bdark" class="button">
         🌜 Modo oscuro
       </button>
     </div>
@@ -52,6 +52,9 @@
     <!--Comienzo seccion imagen-->
     
     <aside  class="aside-img" id="asideImagen">
+      <button type="button" class="cerrar" id="cerrar">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
       <h2 class="tituloImagen" id="tituloSeccionImagen">IMAGEN</h2>
       <div class="seccionUrl">
         <h4 class="titulo-url">URL</h4>
@@ -126,7 +129,10 @@
     <!--Comienzo seccion texto-->
     
     <aside class="columnaLateralTexto" id="asideTexto">
-    <form>
+      <button type="button" class="cerrar" id="cerrarTexto">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <form>
       <h2 class="tituloTextoAside" id="tituloTexxt">TEXTO</h2>
       <div  class="contenedorColumnaTexto">
         <h4 class="mod-title">SUPERIOR</h4>

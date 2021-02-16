@@ -36,6 +36,8 @@ const hue = document.getElementById("hue");
 const saturado = document.getElementById("saturado");
 const negativo = document.getElementById("negativo");
 const resetFiltros = document.getElementById("resetFiltros");
+const cerrar = document.getElementById("cerrar");
+const cerrarTexto = document.getElementById("cerrarTexto");
 
 
 
@@ -284,3 +286,55 @@ resetFiltros.addEventListener('click', (e) => {
     filter();
 });
   
+// Modo claro-oscuro
+
+const bdark = document.querySelector('#bdark');
+const body = document.querySelector('body');
+
+load();
+
+bdark.addEventListener('click', e =>{
+    body.classList.toggle('darkmode');
+    store(body.classList.contains('darkmode'));
+} );
+
+function load(){
+    const darkmode = localStorage.getItem('darkmode');
+    
+    if (!darkmode){
+        store('false');
+        bdark.innerText='🌞 Modo Claro';
+    }else if (darkmode == 'true'){
+        body.classList.add('darkmode');
+        // bdark.innerText='🌞 Modo Claro';
+    };
+}
+
+function store(value){
+    localStorage.setItem('darkmode', value);
+};
+
+
+//Boton cerrar Imagen
+
+cerrar.addEventListener("click", function(){
+    let asides = document.getElementsByTagName('aside');
+    for(let i=0; i<asides.length; i++)
+    {
+      asides[i].style.display="none";
+      cajaPrincipal.style.width="100%";
+    }
+  });
+  
+
+  
+  //Boton cerrar texto
+  
+ cerrarTexto.addEventListener("click", function(){
+    let asides = document.getElementsByTagName('aside');
+    for(let i=0; i<asides.length; i++)
+    {
+      asides[i].style.display="none";
+      cajaPrincipal.style.width="100%";
+    }
+  });
