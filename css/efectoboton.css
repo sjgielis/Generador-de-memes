@@ -59,3 +59,11 @@ body {
     background-position: 400%;
   }
 }
+
+
+@media (max-width:1000px) {
+  .button {
+    width: 150px;
+    
+  }
+}
