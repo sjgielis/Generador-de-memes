@@ -157,7 +157,6 @@
   }
   
   
-  
   .aside-img{
     width: 20%;
     height: 100%;
@@ -568,12 +567,14 @@
     margin-top: 13%;
     margin-bottom: 20px;
   }
-  
+/*   
   .ocultar{
     display: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
-  
+   */
+
+   
   /* Modo claro-oscuro */
 
   body.darkmode{

@@ -38,12 +38,7 @@ const negativo = document.getElementById("negativo");
 const resetFiltros = document.getElementById("resetFiltros");
 const cerrar = document.getElementById("cerrar");
 const cerrarTexto = document.getElementById("cerrarTexto");
-
-
-
-
-
-
+const botonDescarga = document.getElementById("botonDescarga");
 
 
 // Modificaciones Texto
@@ -74,7 +69,7 @@ topCheckInf.addEventListener('change', () => {
     }
 });
 
-
+// Cambio en el estilo de la fuente
 
 estiloFuente.addEventListener('change', (e) => {
     const fuente = e.target.value;
@@ -108,6 +103,8 @@ tamañoLetra.addEventListener('change', (e) => {
     textoInferior.style.fontSize = `${size}px`;
 });
 
+// Tipo de centrado del texo
+
 
 izquierda.addEventListener('click', (e) => {
     e.preventDefault();
@@ -127,7 +124,7 @@ centrar.addEventListener('click', (e) => {
     textoInferior.style.textAlign = 'center';
   });
 
-
+// Cambio del color de letra
 
 colorLetra.addEventListener('input', (e) =>{
     const colorTexto = e.target.value;
@@ -136,7 +133,7 @@ colorLetra.addEventListener('input', (e) =>{
     textoColor.innerText = `${colorTexto}`;
   })
   
-  
+// Cambio en el color del fondo del texto  
   
   fondoLabel.addEventListener('input', (e) =>{
     const colorFondo = e.target.value;
@@ -144,6 +141,9 @@ colorLetra.addEventListener('input', (e) =>{
     textoInferior.style.backgroundColor = colorFondo;
     colorLabelFondo.innerText = `${colorFondo}`;
   })
+
+
+// transparencia 
 
   function actualizarFondoTexto() {
     if (!transparente.checked) {
@@ -291,11 +291,10 @@ resetFiltros.addEventListener('click', (e) => {
 const bdark = document.querySelector('#bdark');
 const body = document.querySelector('body');
 
-load();
+
 
 bdark.addEventListener('click', e =>{
     body.classList.toggle('darkmode');
-    store(body.classList.contains('darkmode'));
 } );
 
 function load(){
@@ -306,9 +305,11 @@ function load(){
         bdark.innerText='🌞 Modo Claro';
     }else if (darkmode == 'true'){
         body.classList.add('darkmode');
-        // bdark.innerText='🌞 Modo Claro';
+        //  bdark.innerText='🌞 Modo Claro';
     };
 }
+
+
 
 function store(value){
     localStorage.setItem('darkmode', value);
@@ -338,3 +339,18 @@ cerrar.addEventListener("click", function(){
       cajaPrincipal.style.width="100%";
     }
   });
+
+
+  //Botón de descarga
+ 
+  
+botonDescarga.addEventListener('click', (e) => {
+    descarga()
+});
+ const descarga = () =>{
+
+ domtoimage.toBlob(document.getElementById('cajaSeccion'))
+    .then(function (blob) {
+        window.saveAs(blob, 'mi-meme.png');
+    });
+ };
