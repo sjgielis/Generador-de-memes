@@ -157,7 +157,8 @@
   }
   
   
-  .aside-img{
+  
+  .asideImagen{
     width: 20%;
     height: 100%;
     display: flex;
@@ -567,14 +568,12 @@
     margin-top: 13%;
     margin-bottom: 20px;
   }
-/*   
+  
   .ocultar{
     display: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
-   */
-
-   
+  
   /* Modo claro-oscuro */
 
   body.darkmode{

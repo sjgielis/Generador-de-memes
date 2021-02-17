@@ -288,33 +288,37 @@ resetFiltros.addEventListener('click', (e) => {
   
 // Modo claro-oscuro
 
+
 const bdark = document.querySelector('#bdark');
 const body = document.querySelector('body');
-
+load();
 
 
 bdark.addEventListener('click', e =>{
-    body.classList.toggle('darkmode');
-} );
+  body.classList.toggle('darkmode');
+  store(body.classList.contains('darkmode'));
+  load()
+});
 
 function load(){
     const darkmode = localStorage.getItem('darkmode');
-    
-    if (!darkmode){
-        store('false');
-        bdark.innerText='🌞 Modo Claro';
+    if (darkmode == 'false'){
+      bdark.innerText='🌜 Modo Oscuro';
+      asideImagen.style.backgroundColor = '#f09319'
+      asideTexto.style.backgroundColor = '#f09319'
+      store('false');
     }else if (darkmode == 'true'){
+      bdark.innerText='🌞 Modo Claro';
+        asideImagen.style.backgroundColor = '#292626' 
+        asideTexto.style.backgroundColor = '#292626' 
         body.classList.add('darkmode');
-        //  bdark.innerText='🌞 Modo Claro';
-    };
+        store('true')
+    };  
 }
-
-
 
 function store(value){
     localStorage.setItem('darkmode', value);
 };
-
 
 //Boton cerrar Imagen
 
