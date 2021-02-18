@@ -607,7 +607,7 @@
   
   /* responsive */
   
-  @media (min-width:1400px) {
+  @media (max-width:1400px) {
   
     aside {
       display: block;
@@ -622,17 +622,27 @@
     }
   } 
   
-  @media (min-width:1050px) {
+  @media (max-width:1050px) {
     aside {
       display: none;
       box-shadow: none;
       width: 100%;
     }
+     
+    .generador{
+      font-size: 20px;
+      width: 100%;
+    }
+
+
     .textoSuperior, .textoInferior{
       font-size: 20px;
     }
+
     .cerrar {
       display: block;
+      width: 10%;
+      background-color: #FF5EF2;
     } 
     .cajaSeccion {
       height: 400px;
@@ -644,6 +654,7 @@
 
     .button{
       width: 25%;
+      margin: 2px;
     }
   }
   
@@ -651,12 +662,9 @@
   
   
   @media (max-width: 800px){
-    .titulo{
-      font-size: 26px;
-      width: 100%;
-    }
-  
-    .aside-img, .columnaLateralTexto{
+      
+    aside{
+      display: none;
       width: 100%;
     }
   
@@ -673,8 +681,8 @@
     }
   
     .cajaSeccion {
-      width: 80%;
-      margin-top: 8%;
+      width: 100%;
+      margin-top: 25%;
     }
    
   }
