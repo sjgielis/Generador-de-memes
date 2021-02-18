@@ -28,18 +28,20 @@
 <br>
 ***
 
-### Este debería ser el resultado final de tu instalación
+### Vista final
 
-![imagen](./img/screencapture.png)
+![imagen](./img/modo claro.jpeg)
 
-<br>
-
-***
-
-### Este portfolio fue desarrollado para las chicas de la cursada 6 de ADA. Agradezco fundamentalmente a mi esposo e hijos que sin su ayuda no hubiese podido, al profe Jonh por darnos las mejores clases, el aliento y el apoyo para que nunca nos rindamos y al grupo de compañeras/amigas que me dio este curso, por las cuales todo resulta mas sensillo. 
+![imagen](./img/modo oscuro.jpeg)
 
 <br>
 
 ***
 
-#### De Sa Gielis  con  ❤ para ustedes!
+### Este proyecto es el resultado de muchas horas de practica y  fundamentalmente del apoyo, como siempre, de mi esposo e hijos que sin su ayuda no hubiese podido, al profe Jonh por darnos siempre todo el aliento y el apoyo para que nunca nos rindamos y al grupo de compañeras, que algunas ya llamo amigas,  que me dio este curso, que no me dejaron rendirme y me ayudaron tanto. 
+
+<br>
+
+***
+
+#### De Sa Gielis  con mucho  ❤ !
