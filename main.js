@@ -39,6 +39,7 @@ const resetFiltros = document.getElementById("resetFiltros");
 const cerrar = document.getElementById("cerrar");
 const cerrarTexto = document.getElementById("cerrarTexto");
 const botonDescarga = document.getElementById("botonDescarga");
+const nueva = document.getElementById("nueva");
 
 
 // Modificaciones Texto
@@ -358,3 +359,14 @@ botonDescarga.addEventListener('click', (e) => {
         window.saveAs(blob, 'mi-meme.png');
     });
  };
+
+
+ //Responsive
+
+ const panelResponsive = () => {
+    if (window.screen.width <= 700) {
+        nueva.classList.add('responsive');
+    } else {
+        nueva.classList.remove('responsive');
+    }
+};

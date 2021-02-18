@@ -30,9 +30,9 @@
 
 ### Vista final
 
-![imagen](./img/modo claro.jpeg)
+![imagen](./img/modoclaro.jpeg)
 
-![imagen](./img/modo oscuro.jpeg)
+![imagen](./img/modoscuro.jpeg)
 
 <br>
 

@@ -614,6 +614,7 @@
       width: 22%;
       box-shadow: none;
     }
+    
     .cerrar {
       display: none;
     }
@@ -623,12 +624,30 @@
   } 
   
   @media (max-width:1050px) {
-    aside {
+    .nueva{
       display: none;
       box-shadow: none;
       width: 100%;
     }
-     
+    
+    .responsive {
+      display: block;
+      width: 100%;
+      padding: 30px 20px;
+      z-index: 3;
+  }
+
+    #headerBotones{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .cajaPrincipal{
+      width: 100%;
+      
+    }
+
     .generador{
       font-size: 20px;
       width: 100%;
@@ -645,6 +664,7 @@
       background-color: #FF5EF2;
     } 
     .cajaSeccion {
+      width: 100%;
       height: 400px;
       margin-top: 4%;
     }
