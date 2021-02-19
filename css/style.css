@@ -623,7 +623,7 @@
     }
   } 
   
-  @media (max-width:1050px) {
+  @media (max-width:900px) {
     .nueva{
       display: none;
       box-shadow: none;
@@ -642,9 +642,10 @@
       justify-content: center;
       text-align: center;
     }
-  
-    .cajaPrincipal{
-      width: 100%;
+    
+   #cajaPrincipal{
+     
+    width: 100%;
       
     }
 
@@ -668,6 +669,8 @@
       height: 400px;
       margin-top: 4%;
     }
+
+    
     .cajaPadre{
       height: 17vh;
     }
@@ -681,7 +684,7 @@
   
   
   
-  @media (max-width: 800px){
+  /* @media (max-width: 800px){
       
     aside{
       display: none;
@@ -706,3 +709,35 @@
     }
    
   }
+ */
+
+  MENU RESPONSIVE
+
+
+ @media (min-width: 280px) and (max-width: 900px){
+  .asideTextoResp{
+      position: absolute;
+      height: auto;
+      width: 100%;
+      opacity: unset;
+  }   
+  
+  #asideImagen, .columnaLateralTexto{
+      height: auto;
+      opacity: unset;
+      transition: all 5s;
+      background-color: white;
+  }
+  
+  .cerrar{
+      display: block;
+      position: absolute;
+      right: 0;
+      margin-right: 10%;
+      font-size: 1.5rem;
+      color: rgb(33, 33, 73);
+
+  }
+
+   
+}

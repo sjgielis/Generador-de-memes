@@ -361,12 +361,31 @@ botonDescarga.addEventListener('click', (e) => {
  };
 
 
- //Responsive
+//Side-Bar//
 
- const panelResponsive = () => {
-    if (window.screen.width <= 700) {
-        nueva.classList.add('responsive');
-    } else {
-        nueva.classList.remove('responsive');
+const responsiveMenu = ()=>{
+    if(window.screen.width < 900){
+        header.style.display = 'none'
+        backgroundPage.style.display = 'none'
+        asideTexto.style.display = 'flex'
+        asideTexto.classList.add ('asideTextoResp')
+        
+
+
+    }else{
+        header.style.display = 'flex'
+        backgroundPage.style.display = 'flex'
+        asideTexto.classList.remove ('asideTextoResp')
+        asideTexto.classList.add ('asideImagen')  
+      
+}
+}
+
+
+cerrar.addEventListener('click', ()=>{
+  
+    asideImagen.style.display = 'none'
+    header.style.display = 'flex'
+    backgroundPage.style.display = 'flex'
     }
-};
+)
