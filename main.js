@@ -40,6 +40,7 @@ const cerrar = document.getElementById("cerrar");
 const cerrarTexto = document.getElementById("cerrarTexto");
 const botonDescarga = document.getElementById("botonDescarga");
 const nueva = document.getElementById("nueva");
+const botonImagen = document.getElementById("botonImagen");
 
 
 // Modificaciones Texto
@@ -199,16 +200,19 @@ interlineado.addEventListener('change', (e) => {
 // /Cambio de boton texto a boton imagen
 
 
-showImageAtributes();
+// showImageAtributes();
+
 function showImageAtributes(){
+  console.log('funciona');
   asideTexto.style.display= 'none';
-  asideImagen.style.display = '';
-  cajaPrincipal.style.width="80%";
+  asideImagen.style.display = 'block';
+  // cajaPrincipal.style.width="80%";
 }
 
 function showTextAtributes(){
+  console.log('funciona');
   asideImagen.style.display='none';
-  asideTexto.style.display= ''; 
+  asideTexto.style.display= 'block'; 
   cajaPrincipal.style.width="80%";
 }
 
@@ -382,10 +386,4 @@ const responsiveMenu = ()=>{
 }
 
 
-cerrar.addEventListener('click', ()=>{
-  
-    asideImagen.style.display = 'none'
-    header.style.display = 'flex'
-    backgroundPage.style.display = 'flex'
-    }
-)
+
