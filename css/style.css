@@ -676,6 +676,7 @@
   
     .textoSuperior, .textoInferior{
      font-size: 15px;
+     padding: 10px;
     }
     
     #contenedorBotones{
@@ -684,6 +685,7 @@
   
     #cajaSeccion {
       width: 100%;
+      margin-top: 0;
       
     }
 
@@ -692,12 +694,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 0%;
     }
-   
-   #textoCentro{
-    
-     height: 20%;
-       }
 
   }
 
